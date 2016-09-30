@@ -1,0 +1,1 @@
+java -Dhttp.port=80 %1 -cp "lib/*;" play.core.server.NettyServer
