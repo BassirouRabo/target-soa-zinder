@@ -1,0 +1,187 @@
+# Home
+GET         /                   controllers.HomeController.index
+GET         /connexion          controllers.HomeController.connexion()
+GET         /deconnexion        controllers.HomeController.deconnexion()
+GET         /inscription        controllers.HomeController.inscription()
+POST        /connexion          controllers.HomeController.authentification()
+GET         /error-client       controllers.HomeController.errorClient()
+GET         /error-server       controllers.HomeController.errorServer(message: String)
+
+
+# Article
+GET         /articles                            controllers.ArticleController.reads()
+POST        /articles                            controllers.ArticleController.create()
+GET         /articles/:id                        controllers.ArticleController.read(id: Long)
+POST        /articles/:id/update                 controllers.ArticleController.update(id: Long)
+GET         /articles/:id/delete                 controllers.ArticleController.delete(id: Long)
+
+# Entree Article
+POST        /articles/:idArticle/entree-articles/create                 controllers.EntreeArticleController.create(idArticle: Long)
+GET         /articles/:idArticle/entree-articles/:id                     controllers.EntreeArticleController.read(idArticle: Long, id: Long)
+POST        /articles/:idArticle/entree-articles/:id/update              controllers.EntreeArticleController.update(idArticle: Long, id: Long)
+GET         /articles/:idArticle/entree-articles/:id/delete              controllers.EntreeArticleController.delete(idArticle: Long, id: Long)
+
+# Sortie Article
+POST        /articles/:idArticle/sortie-articles/create                 controllers.SortieArticleController.create(idArticle: Long)
+GET         /articles/:idArticle/sortie-articles/:id                     controllers.SortieArticleController.read(idArticle: Long, id: Long)
+POST        /articles/:idArticle/sortie-articles/:id/update              controllers.SortieArticleController.update(idArticle: Long, id: Long)
+GET         /articles/:idArticle/sortie-articles/:id/delete              controllers.SortieArticleController.delete(idArticle: Long, id: Long)
+
+# BonReparation
+GET         /bon-reparations                   controllers.BonReparationController.reads()
+POST        /bon-reparations                   controllers.BonReparationController.create()
+GET         /bon-reparations/:id               controllers.BonReparationController.read(id: Long)
+POST        /bon-reparations/:id/update        controllers.BonReparationController.update(id: Long)
+GET         /bon-reparations/:id/delete        controllers.BonReparationController.delete(id: Long)
+GET         /bon-reparations/:id/reference/:referenceImpressionBonReparation/generate      controllers.BonReparationController.generateBonReparation(id: Long, referenceImpressionBonReparation: String)
+
+# DemandeTravaux
+GET         /demande-travaux                   controllers.DemandeTravauxController.reads()
+POST        /demande-travaux                   controllers.DemandeTravauxController.create()
+GET         /demande-travaux/:id               controllers.DemandeTravauxController.read(id: Long)
+GET         /demande-travaux/:id/edit                         controllers.DemandeTravauxController.edit(id: Long)
+POST        /demande-travaux/:id/update        controllers.DemandeTravauxController.update(id: Long)
+GET         /demande-travaux/:id/delete        controllers.DemandeTravauxController.delete(id: Long)
+GET         /demande-travauxs/:id/reference/:referenceImpressionDemandeTravaux/generate      controllers.DemandeTravauxController.generateDemandeTravaux(id: Long, referenceImpressionDemandeTravaux: String)
+
+# TAF
+GET          /demande-travaux/:idParent/tafs               controllers.TafController.readsByReparation(idParent: Long)
+POST         /demande-travaux/:idParent/tafs               controllers.TafController.create(idParent: Long)
+GET          /demande-travaux/:idParent/tafs/:id           controllers.TafController.read(idParent: Long, id: Long)
+POST         /demande-travaux/:idParent/tafs/:id/update    controllers.TafController.update(idParent: Long, id: Long)
+GET          /demande-travaux/:idParent/tafs/:id/delete    controllers.TafController.delete(idParent: Long, id: Long)
+
+# OrdrePaiement
+GET         /ordre-paiements                    controllers.OrdrePaiementController.reads()
+POST        /ordre-paiements                    controllers.OrdrePaiementController.create()
+GET         /ordre-paiements/:id                controllers.OrdrePaiementController.read(id: Long)
+GET         /ordre-paiements/:id/edit                         controllers.OrdrePaiementController.edit(id: Long)
+POST        /ordre-paiements/:id/update         controllers.OrdrePaiementController.update(id: Long)
+GET         /ordre-paiements/:id/delete         controllers.OrdrePaiementController.delete(id: Long)
+GET         /ordre-paiements/:idParent/tafs/:id               controllers.TafController.read2(idParent: Long, id: Long)
+POST        /ordre-paiements/:idParent/tafs/:id/update        controllers.TafController.update2(idParent: Long, id: Long)
+GET         /ordre-paiements/:id/reference/:referenceImpressionOrdrePaiement/generate      controllers.OrdrePaiementController.generateOrdrePaiement(id: Long, referenceImpressionOrdrePaiement: String)
+
+# Client Transport
+GET         /client-transports                   controllers.ClientTransportController.reads()
+POST        /client-transports                   controllers.ClientTransportController.create()
+GET         /client-transports/:id               controllers.ClientTransportController.read(id: Long)
+POST        /client-transports/:id/update        controllers.ClientTransportController.update(id: Long)
+GET         /client-transports/:id/delete        controllers.ClientTransportController.delete(id: Long)
+
+# Client Vente
+GET         /client-ventes                       controllers.ClientVenteController.reads()
+POST        /client-ventes                       controllers.ClientVenteController.create()
+GET         /client-ventes/:id                   controllers.ClientVenteController.read(id: Long)
+POST        /client-ventes/:id/update            controllers.ClientVenteController.update(id: Long)
+GET         /client-ventes/:id/delete            controllers.ClientVenteController.delete(id: Long)
+
+# Facture Vente
+GET         /facture-ventes                                           controllers.FactureVenteController.reads()
+POST        /facture-ventes                                           controllers.FactureVenteController.create()
+GET         /facture-ventes/:id                                       controllers.FactureVenteController.read(id: Long)
+POST        /facture-ventes/:id/update                                controllers.FactureVenteController.update(id: Long)
+GET         /facture-ventes/:id/delete                                controllers.FactureVenteController.delete(id: Long)
+GET         /facture-ventes/:id/edit                                  controllers.FactureVenteController.edit(id: Long)
+GET         /facture-ventes/:id/reference/:referenceImpressionFactureVente/generate/proforma      controllers.FactureVenteController.generateProforma(id: Long, referenceImpressionFactureVente: String)
+GET         /facture-ventes/:id/reference/:referenceImpressionFactureVente/generate/definitive      controllers.FactureVenteController.generateDefinitive(id: Long, referenceImpressionFactureVente: String)
+
+
+# Facture Transport
+GET         /facture-transports                                       controllers.FactureTransportController.reads()
+POST        /facture-transports                                       controllers.FactureTransportController.create()
+GET         /facture-transports/:id                                   controllers.FactureTransportController.read(id: Long)
+POST        /facture-transports/:id/update                            controllers.FactureTransportController.update(id: Long)
+GET         /facture-transports/:id/delete                            controllers.FactureTransportController.delete(id: Long)
+GET         /facture-transports/:id/edit                              controllers.FactureTransportController.edit(id: Long)
+GET         /facture-transports/:id/reference/:referenceImpressionFactureTransport/generate/proforma      controllers.FactureTransportController.generateProforma(id: Long, referenceImpressionFactureTransport: String)
+GET         /facture-transports/:id/reference/:referenceImpressionFactureTransport/generate/definitive      controllers.FactureTransportController.generateDefinitive(id: Long, referenceImpressionFactureTransport: String)
+GET         /facture-transports/:id/reference/:referenceImpressionFactureTransport/generate/proforma-sonidep      controllers.FactureTransportController.generateProformaSonidep(id: Long, referenceImpressionFactureTransport: String)
+GET         /facture-transports/:id/reference/:referenceImpressionFactureTransport/generate/definitive-sonidep      controllers.FactureTransportController.generateDefinitiveSonidep(id: Long, referenceImpressionFactureTransport: String)
+
+
+
+# Commande Vente
+GET         /commande-ventes                                          controllers.CommandeVenteController.reads()
+POST        /facture-ventes/:idParent/commandes                       controllers.CommandeVenteController.create(idParent: Long)
+GET         /facture-ventes/:idParent/commandes/:id                   controllers.CommandeVenteController.read(idParent: Long, id: Long)
+POST        /facture-ventes/:idParent/commandes/:id/update            controllers.CommandeVenteController.update(idParent: Long, id: Long)
+GET         /facture-ventes/:idParent/commandes/:id/delete            controllers.CommandeVenteController.delete(idParent: Long, id: Long)
+
+# Commande Transport
+GET         /commande-transports                                      controllers.CommandeTransportController.reads()
+POST        /facture-transports/:idParent/commandes                   controllers.CommandeTransportController.create(idParent: Long)
+GET         /facture-transports/:idParent/commandes/:id               controllers.CommandeTransportController.read(idParent: Long, id: Long)
+POST        /facture-transports/:idParent/commandes/:id/update        controllers.CommandeTransportController.update(idParent: Long, id: Long)
+GET         /facture-transports/:idParent/commandes/:id/delete        controllers.CommandeTransportController.delete(idParent: Long, id: Long)
+
+# Paiement Vente
+GET         /paiement-ventes                                          controllers.PaiementVenteController.reads()
+POST        /facture-ventes/:idParent/paiements                       controllers.PaiementVenteController.create(idParent: Long)
+GET         /facture-ventes/:idParent/paiements/:id                   controllers.PaiementVenteController.read(idParent: Long, id: Long)
+GET         /facture-ventes/:idParent/paiements/:id/traiter           controllers.PaiementVenteController.traiter(idParent: Long, id: Long)
+POST        /facture-ventes/:idParent/paiements/:id/update            controllers.PaiementVenteController.update(idParent: Long, id: Long)
+GET         /facture-ventes/:idParent/paiements/:id/delete            controllers.PaiementVenteController.delete(idParent: Long, id: Long)
+
+# Paiement Transport
+GET         /paiement-transports                                      controllers.PaiementTransportController.reads()
+POST        /facture-transports/:idParent/paiements                   controllers.PaiementTransportController.create(idParent: Long)
+GET         /facture-transports/:idParent/paiements/:id               controllers.PaiementTransportController.read(idParent: Long, id: Long)
+GET         /facture-transports/:idParent/paiements/:id/traiter       controllers.PaiementTransportController.traiter(idParent: Long, id: Long)
+POST        /facture-transports/:idParent/paiements/:id/update        controllers.PaiementTransportController.update(idParent: Long, id: Long)
+GET         /facture-transports/:idParent/paiements/:id/delete        controllers.PaiementTransportController.delete(idParent: Long, id: Long)
+
+# Camion
+GET         /camions                            controllers.CamionController.reads()
+POST        /camions                            controllers.CamionController.create()
+GET         /camions/:id                        controllers.CamionController.read(id: Long)
+POST        /camions/:id/update                 controllers.CamionController.update(id: Long)
+GET         /camions/:id/delete                 controllers.CamionController.delete(id: Long)
+
+# Depense
+GET         /depenses                           controllers.DepenseController.reads()
+POST        /depenses                           controllers.DepenseController.create()
+GET         /depenses/:id                       controllers.DepenseController.read(id: Long)
+POST        /depenses/:id/update                controllers.DepenseController.update(id: Long)
+GET         /depenses/:id/delete                controllers.DepenseController.delete(id: Long)
+
+# Personnel
+GET         /personnels                         controllers.PersonnelController.reads()
+POST        /personnels                         controllers.PersonnelController.create()
+GET         /personnels/:id                     controllers.PersonnelController.read(id: Long)
+POST        /personnels/:id/update              controllers.PersonnelController.update(id: Long)
+GET         /personnels/:id/delete              controllers.PersonnelController.delete(id: Long)
+
+# Produit
+GET         /produits                   controllers.ProduitController.reads()
+POST        /produits                   controllers.ProduitController.create()
+GET         /produits/:id               controllers.ProduitController.read(id: Long)
+POST        /produits/:id/update        controllers.ProduitController.update(id: Long)
+GET         /produits/:id/delete        controllers.ProduitController.delete(id: Long)
+
+# Proprietaire
+GET         /proprietaires                   controllers.ProprietaireController.reads()
+POST        /proprietaires                   controllers.ProprietaireController.create()
+GET         /proprietaires/:id               controllers.ProprietaireController.read(id: Long)
+POST        /proprietaires/:id/update        controllers.ProprietaireController.update(id: Long)
+GET         /proprietaires/:id/delete        controllers.ProprietaireController.delete(id: Long)
+
+# Salaire
+GET         /salaires                                         controllers.SalaireController.reads()
+POST        /salaires                                         controllers.SalaireController.create()
+GET         /salaires/:id                                     controllers.SalaireController.read(id: Long)
+POST        /salaires/:id/update                              controllers.SalaireController.update(id: Long)
+GET         /salaires/:id/delete                              controllers.SalaireController.delete(id: Long)
+
+# Utilisateur
+GET         /utilisateurs                   controllers.UtilisateurController.reads()
+POST        /utilisateurs                   controllers.UtilisateurController.create()
+GET         /utilisateurs/:id               controllers.UtilisateurController.read(id: Long)
+POST        /utilisateurs/:id/update        controllers.UtilisateurController.update(id: Long)
+GET         /utilisateurs/:id/delete        controllers.UtilisateurController.delete(id: Long)
+
+# Rapport
+GET        /rapport/download/:folder/:reference                 controllers.RapportController.download(folder: String, reference: String)
+
+# Map static resources from the /public folder to the /assets URL path
+GET     /assets/*file               controllers.Assets.versioned(path="/public", file: Asset)

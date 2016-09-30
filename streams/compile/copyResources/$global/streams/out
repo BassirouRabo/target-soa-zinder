@@ -1,0 +1,6 @@
+[0m[[0mdebug[0m] [0mCopy resource mappings: [0m
+[0m[[0mdebug[0m] [0m	(/home/brabo/IdeaProjects/hydrocarbure-transport/conf/routes,/home/brabo/IdeaProjects/hydrocarbure-transport/target/scala-2.11/classes/routes)[0m
+[0m[[0mdebug[0m] [0m	(/home/brabo/IdeaProjects/hydrocarbure-transport/conf/META-INF,/home/brabo/IdeaProjects/hydrocarbure-transport/target/scala-2.11/classes/META-INF)[0m
+[0m[[0mdebug[0m] [0m	(/home/brabo/IdeaProjects/hydrocarbure-transport/conf/application.conf,/home/brabo/IdeaProjects/hydrocarbure-transport/target/scala-2.11/classes/application.conf)[0m
+[0m[[0mdebug[0m] [0m	(/home/brabo/IdeaProjects/hydrocarbure-transport/conf/logback.xml,/home/brabo/IdeaProjects/hydrocarbure-transport/target/scala-2.11/classes/logback.xml)[0m
+[0m[[0mdebug[0m] [0m	(/home/brabo/IdeaProjects/hydrocarbure-transport/conf/META-INF/persistence.xml,/home/brabo/IdeaProjects/hydrocarbure-transport/target/scala-2.11/classes/META-INF/persistence.xml)[0m
