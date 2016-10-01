@@ -4,10 +4,10 @@
 	<info
 		organisation="hydrocarbure-transport"
 		module="hydrocarbure-transport_2.11"
-		revision="1.0-SNAPSHOT"
+		revision="1.0"
 		conf="provided"
 		confs="compile, runtime, test, provided, optional, compile-internal, runtime-internal, test-internal, plugin, sources, docs, pom, scala-tool"
-		date="20160930225812"/>
+		date="20160930232927"/>
 	<dependencies>
 	</dependencies>
 </ivy-report>

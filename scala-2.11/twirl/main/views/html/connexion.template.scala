@@ -105,7 +105,7 @@ Seq[Any](format.raw/*1.1*/("""<!DOCTYPE html>
 object connexion extends connexion_Scope0.connexion
               /*
                   -- GENERATED --
-                  DATE: Fri Sep 30 22:58:14 EDT 2016
+                  DATE: Fri Sep 30 23:29:29 EDT 2016
                   SOURCE: /home/brabo/IdeaProjects/hydrocarbure-transport/app/views/connexion.scala.html
                   HASH: d8c7f283dc4e6c03b4dcc7d0c5b5a86ef1ac070f
                   MATRIX: 835->0|902->42|928->48|960->54|1382->449|1421->479|1461->481|1523->515|1770->735|1784->740|1818->753|1880->787|1948->824|2006->855|2047->887|2087->889|2149->923|2396->1143|2410->1148|2446->1163|2514->1200|2568->1226|3907->2539|3934->2545|3969->2553
