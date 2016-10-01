@@ -115,7 +115,7 @@ Seq[Any](format.raw/*1.1*/("""<!DOCTYPE html>
 object inscription extends inscription_Scope0.inscription
               /*
                   -- GENERATED --
-                  DATE: Fri Sep 30 01:30:44 EDT 2016
+                  DATE: Fri Sep 30 22:58:14 EDT 2016
                   SOURCE: /home/brabo/IdeaProjects/hydrocarbure-transport/app/views/inscription.scala.html
                   HASH: 549de2796dcf3c8552cc8ed4d0e8fc97866da1d9
                   MATRIX: 839->0|906->42|932->48|964->54|1386->449|1425->479|1465->481|1527->515|1774->735|1788->740|1822->753|1884->787|1952->824|2010->855|2051->887|2091->889|2153->923|2400->1143|2414->1148|2450->1163|2518->1200|2572->1226|4459->3087|4486->3093|4521->3101

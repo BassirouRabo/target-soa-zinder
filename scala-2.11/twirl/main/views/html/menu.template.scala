@@ -137,7 +137,7 @@ Seq[Any](format.raw/*1.1*/("""<div class="navbar-default sidebar" role="navigati
 object menu extends menu_Scope0.menu
               /*
                   -- GENERATED --
-                  DATE: Fri Sep 30 01:30:43 EDT 2016
+                  DATE: Fri Sep 30 22:58:13 EDT 2016
                   SOURCE: /home/brabo/IdeaProjects/hydrocarbure-transport/app/views/menu.scala.html
                   HASH: 197fe0e3ef240d70609396e55cc23c14e6ce90fd
                   MATRIX: 825->0
